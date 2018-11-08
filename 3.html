@@ -96,14 +96,14 @@
 				THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 
 				new THREE.MTLLoader()
-					.setPath( '/obj/' )
+					.setPath( 'obj/' )
 					.load( '3.mtl', function ( material1 ) {
 
 						material1.preload();
 
 						new THREE.OBJLoader()
 							.setMaterials( material1 )
-							.setPath( '/obj/' )
+							.setPath( 'obj/' )
 							.load( '3.obj', function ( object1 ) {
 
 								scene.add( object1 );
